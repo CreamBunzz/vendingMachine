@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vendingMachine", "vendingMachine\vendingMachine.csproj", "{DB2F571E-CADB-43D7-8C4D-D9173F1522A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vendingMachineTest", "vendingMachineTest\vendingMachineTest.csproj", "{DA92B646-20E9-4D7E-8F27-0C4E685345BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB2F571E-CADB-43D7-8C4D-D9173F1522A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB2F571E-CADB-43D7-8C4D-D9173F1522A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB2F571E-CADB-43D7-8C4D-D9173F1522A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB2F571E-CADB-43D7-8C4D-D9173F1522A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA92B646-20E9-4D7E-8F27-0C4E685345BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA92B646-20E9-4D7E-8F27-0C4E685345BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA92B646-20E9-4D7E-8F27-0C4E685345BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA92B646-20E9-4D7E-8F27-0C4E685345BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F939E61-7A59-435B-88A6-C510E99CFCDB}
+	EndGlobalSection
+EndGlobal

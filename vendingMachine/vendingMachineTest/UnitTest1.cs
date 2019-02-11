@@ -10,7 +10,7 @@ namespace vendingMachineTest
         [TestMethod]
         public void 正しく読み取れる100円Version()
         {
-            var managedMoney = new ManagedMoney();
+            var managedMoney = new MoneyController();
             managedMoney.PutMoney(Coin.Create(100));
             Assert.AreEqual(100, managedMoney.Total);            
         }
@@ -18,7 +18,7 @@ namespace vendingMachineTest
         [TestMethod]
         public void 正しく読み取れない30円Version()
         {
-            var managedMoney = new ManagedMoney();
+            var managedMoney = new MoneyController();
             Assert.ThrowsException<ArgumentException>(() => { managedMoney.PutMoney(Coin.Create(30)); }); // fail
 
         }

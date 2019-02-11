@@ -2,43 +2,41 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace vendingMachine
 {
-    class Controller
+    sealed public class Controller
     {
-        ManagedMoney managedMoney = new ManagedMoney();
-        ManagedDrink managedDrink = new ManagedDrink();
+        private readonly MoneyController moneyController = new MoneyController();
+        private readonly DrinkController dringController = new DrinkController();
 
-        public void run()
+        public void Run()
         {
-            Message Msg = new Message();
-            Console.WriteLine(Msg.hellow);
-            for (; ; )
-            {
-                Console.WriteLine("お金投入:1,払い戻し:2, 選択:3, コーラ購入:4, 売上:99");
-                String mode = Console.ReadLine();
+            SelectMode();
+        }
 
+        private void SelectMode()
+        {
+            while (true)
+            {
                 try
                 {
-                    switch (mode)
+                    switch (Utils.ReadAndWrite("お金投入:1,払い戻し:2, 選択:3, コーラ購入:4, 売上:99"))
                     {
                         case "1":
-                            Console.WriteLine("投入金額を入力してください(10円・50円・100円・500円)");
-                            managedMoney.PutMoney(Coin.Create((Int32.Parse(Console.ReadLine()))));
+                            moneyController.PutMoney(Coin.Create((Int32.Parse(Utils.ReadAndWrite("投入金額を入力してください(10円・50円・100円・500円)")))));
                             break;
                         case "2":
-                            Console.WriteLine("払い戻しした金額だよー：" + managedMoney.Refund() + "円");
+                            Console.WriteLine("払い戻しした金額だよー：" + moneyController.BackTotal() + "円");
                             break;
                         case "3":
-                            Console.WriteLine(ManagedDrink.Cola.Name + "(" + ManagedDrink.Cola.Price + "円): " + managedDrink.DrinksCount(ManagedDrink.Cola.Name) + "本");
+                            Console.WriteLine(DrinkController.Cola.Name + "(" + DrinkController.Cola.Price + "円): " + dringController.CountDrink(DrinkController.Cola.Name) + "本");
                             break;
-                        case "4":                        
-                            Buy(managedMoney.Total, ManagedDrink.Cola);
+                        case "4":
+                            Buy(moneyController.Total, DrinkController.Cola);
                             break;
                         case "99":
-                            Console.WriteLine("ハッピー金額:" + managedMoney.Profit + "円");
+                            Console.WriteLine("ハッピー金額:" + moneyController.Profit + "円");
                             break;
                         default:
                             break;
@@ -56,30 +54,18 @@ namespace vendingMachine
                 {
                     Console.WriteLine(e);
                 }
-                Console.WriteLine("今預かってるお金だよー：" + managedMoney.Total + "円");
+                Console.WriteLine("今預かってるお金だよー：" + moneyController.Total + "円");
             }
 
-            string input2 = Console.ReadLine();
         }
 
-        public void Buy(int money, Drink drink)
+        private void Buy(int money, Drink drink)
         {
-            if ((money >= drink.Price) && (managedDrink.DrinksCount(drink.Name) > 0))
+            if ((money >= drink.Price) && (dringController.CountDrink(drink.Name) > 0))
             {
-                managedDrink.Reduce(drink);
-                managedMoney.Reduce(drink.Price);
-                managedMoney.Add(drink.Price);
-            } 
-        }
-
-
-        class Message
-        {
-            public string hellow = "ようこそ自動販売機へ！\r\n";
-
-            public Message()
-            {
-                hellow = "ようこそ自動販売機へ！";
+                dringController.Reduce(drink);
+                moneyController.Reduce(drink.Price);
+                moneyController.Add(drink.Price);
             }
         }
     }

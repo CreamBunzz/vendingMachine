@@ -10,11 +10,8 @@ namespace vendingMachine
         private readonly MoneyController moneyController = new MoneyController();
         private readonly DrinkController dringController = new DrinkController();
 
-        public void Run()
-        {
-            SelectMode();
-        }
-
+        public void Run() => SelectMode();
+        // TODO 見直し予定
         private void SelectMode()
         {
             while (true)
@@ -33,6 +30,9 @@ namespace vendingMachine
                             Console.WriteLine(DrinkController.Cola.Name + "(" + DrinkController.Cola.Price + "円): " + dringController.CountDrink(DrinkController.Cola.Name) + "本");
                             break;
                         case "4":
+                            Buy(moneyController.Total, DrinkController.Cola);
+                            break;
+                        case "5":
                             Buy(moneyController.Total, DrinkController.Cola);
                             break;
                         case "99":

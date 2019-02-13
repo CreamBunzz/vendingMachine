@@ -11,8 +11,8 @@ namespace vendingMachine
         public int Total { get => _total; }
         public int Profit { get => _profit; }
         public void PutMoney(Coin coin) => _total += coin.Value; 
-        public void Add(int money) => _profit += money; 
-        public void Reduce(int money) => _total -= money; 
+        public void AddProfit(int money) => _profit += money; 
+        public void ReduceMoney(int money) => _total -= money; 
         public int BackTotal()
         {
             int t = _total;

@@ -1,1 +1,5 @@
 .vs/
+vendingMachine/vendingMachine/bin/
+vendingMachine/vendingMachine/obj/
+vendingMachine/vendingMachineTest/bin/
+vendingMachine/vendingMachineTest/obj/

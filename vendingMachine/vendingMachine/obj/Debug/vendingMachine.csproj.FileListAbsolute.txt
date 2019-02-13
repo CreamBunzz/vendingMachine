@@ -19,3 +19,10 @@ C:\Users\hiroyuki.nishi\Git\C#\fork\vendingMachine\vendingMachine\vendingMachine
 C:\Users\hiroyuki.nishi\Git\C#\fork\vendingMachine\vendingMachine\vendingMachine\obj\Debug\vendingMachine.csproj.CoreCompileInputs.cache
 C:\Users\hiroyuki.nishi\Git\C#\fork\vendingMachine\vendingMachine\vendingMachine\obj\Debug\vendingMachine.exe
 C:\Users\hiroyuki.nishi\Git\C#\fork\vendingMachine\vendingMachine\vendingMachine\obj\Debug\vendingMachine.pdb
+C:\Github\vendingMachine\vendingMachine\vendingMachine\bin\Debug\vendingMachine.exe.config
+C:\Github\vendingMachine\vendingMachine\vendingMachine\bin\Debug\vendingMachine.exe
+C:\Github\vendingMachine\vendingMachine\vendingMachine\bin\Debug\vendingMachine.pdb
+C:\Github\vendingMachine\vendingMachine\vendingMachine\obj\Debug\vendingMachine.csprojAssemblyReference.cache
+C:\Github\vendingMachine\vendingMachine\vendingMachine\obj\Debug\vendingMachine.csproj.CoreCompileInputs.cache
+C:\Github\vendingMachine\vendingMachine\vendingMachine\obj\Debug\vendingMachine.exe
+C:\Github\vendingMachine\vendingMachine\vendingMachine\obj\Debug\vendingMachine.pdb

@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Controller.cs" />
-    <Compile Include="Controller\DrinkControlle.cs" />
+    <Compile Include="Controller\DrinkController.cs" />
     <Compile Include="Controller\MoneyController.cs" />
     <Compile Include="Model\Coin.cs" />
     <Compile Include="Model\Drink.cs" />
